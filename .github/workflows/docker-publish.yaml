@@ -37,7 +37,8 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v3
         with:
-          push: true
+          context: ./src
+          push: false # TODO
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
