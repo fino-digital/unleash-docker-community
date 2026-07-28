@@ -1,8 +1,6 @@
 ## Unleash Community Docker Image with OpenID Connect Support
 
 **Useful links:**
-
-- [Docker image on dockerhub](https://hub.docker.com/r/unleashorg/unleash-community-openid-connect)
 - [passport-openid-connect](https://www.passportjs.org/packages/passport-openidconnect/)
 
 For an example usage see the example below.
@@ -11,7 +9,7 @@ You can also visit the [passport](https://www.passportjs.org/docs/) and [openid-
 ## Example
 
 This shows the usage of the OpenIdConnectStrategy with a keycloak realm as IDP.
-It authenticates the user and checks some custom roles to give the user some initial permissions. 
+It authenticates the user and checks some custom roles to give the user some initial permissions.
 It also updates the role in case it changed, so you can completely control unleash permissions through roles in keycloak.
 You need to configure your client accordingly, so it returns roles as a `resource_access` object.
 
@@ -75,7 +73,7 @@ function openIdConnect(app, config, services) {
                 new AuthenticationRequired({
                     path: '/api/admin/login',
                     type: 'custom',
-                    message: `You have to identify yourself in order to use Unleash. 
+                    message: `You have to identify yourself in order to use Unleash.
                         Click the button and follow the instructions.`,
                 }),
             )
