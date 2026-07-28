@@ -6,8 +6,8 @@ ARG NODE_VERSION=20.19.2-alpine
 FROM node:$NODE_VERSION AS builder
 
     WORKDIR /unleash
-    COPY index.js package.json yarn.lock ./
-    RUN yarn install --frozen-lockfile --production=true
+    COPY index.js package.json package-lock.json ./
+    RUN NODE_ENV=production npm ci --no-audit
 
 FROM node:$NODE_VERSION AS runner
     ENV NODE_ENV=production
