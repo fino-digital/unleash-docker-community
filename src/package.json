@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@exlinc/keycloak-passport": "^1.0.2",
     "passport": "^0.7.0",
     "passport-openidconnect": "^0.1.2",
     "unleash-server": "6.10.1"
