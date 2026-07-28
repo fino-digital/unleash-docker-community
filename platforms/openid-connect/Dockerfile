@@ -1,3 +1,6 @@
+# syntax=docker/dockerfile:1
+# check=error=true
+
 ARG NODE_VERSION=20.19.2-alpine
 
 FROM node:$NODE_VERSION AS builder
